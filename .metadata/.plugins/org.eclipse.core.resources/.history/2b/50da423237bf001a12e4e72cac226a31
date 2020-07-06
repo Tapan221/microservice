@@ -1,0 +1,18 @@
+package com.example.vmwarenumbergenerator.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.vmwarenumbergenerator.repository.NumberRepo;
+
+@Service
+public class NumberService {
+	@Autowired
+	private NumberRepo numberRepo;
+	
+	
+	public void saveData() {
+		
+	}
+
+}

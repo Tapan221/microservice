@@ -1,0 +1,13 @@
+package com.example.vmwarenumbergenerator.model;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+public class ResponseObject extends ResponseEntity {
+
+	public ResponseObject(Integer integer) {
+		super(integer);
+		// TODO Auto-generated constructor stub
+	}
+
+}

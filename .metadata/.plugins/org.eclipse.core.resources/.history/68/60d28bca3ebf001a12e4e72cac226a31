@@ -1,0 +1,27 @@
+package com.example.vmwarenumbergenerator.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.vmwarenumbergenerator.model.Generator;
+import com.example.vmwarenumbergenerator.repository.NumberRepo;
+
+@Service
+public class NumberService {
+	
+	Map<String, Integer> map = new HashMap<>();
+	
+	@Autowired
+	private NumberRepo numberRepo;
+	
+	
+	public Map<String, Integer> saveData(Generator generator) {
+		numberRepo.save(generator);
+		return map.put("task", generator.getId());
+		
+	}
+
+}

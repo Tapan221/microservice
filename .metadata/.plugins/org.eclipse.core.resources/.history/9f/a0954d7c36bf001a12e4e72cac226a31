@@ -1,0 +1,5 @@
+package com.example.vmwarenumbergenerator.repository;
+
+public interface NumberRepo {
+
+}

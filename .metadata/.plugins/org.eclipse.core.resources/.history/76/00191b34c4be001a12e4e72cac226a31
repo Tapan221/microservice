@@ -1,0 +1,5 @@
+package com.example.zjpabasics.model;
+
+public class Student {
+
+}

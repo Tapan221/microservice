@@ -1,0 +1,20 @@
+package com.example.vmwarenumbergenerator.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Generator {
+	@Id
+	private int Uid;
+	private int Goal;
+	private int Step;
+
+	
+		
+
+}

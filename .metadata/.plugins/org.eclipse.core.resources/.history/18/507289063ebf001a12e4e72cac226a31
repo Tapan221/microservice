@@ -1,0 +1,62 @@
+package com.example.vmwarenumbergenerator.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Generator {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
+	private int Id;
+	@Column(name="goal")
+	private int Goal;
+	@Column(name="step")
+	private int Step;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Generator [Id=" + Id + ", Goal=" + Goal + ", Step=" + Step + "]";
+	}
+	public Generator() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Generator(int id, int goal, int step) {
+		super();
+		Id = id;
+		Goal = goal;
+		Step = step;
+	}
+	public int getId() {
+		return Id;
+	}
+	public void setId(int id) {
+		Id = id;
+	}
+	public int getGoal() {
+		return Goal;
+	}
+	public void setGoal(int goal) {
+		Goal = goal;
+	}
+	public int getStep() {
+		return Step;
+	}
+	public void setStep(int step) {
+		Step = step;
+	}		
+	
+	
+
+	
+		
+
+}

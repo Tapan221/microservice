@@ -1,0 +1,5 @@
+package com.example.vmwarenumbergenerator.controller;
+
+public class NumberGeneratorController {
+
+}

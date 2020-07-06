@@ -1,0 +1,5 @@
+package com.example.swagger2.model;
+
+public class Contact {
+
+}

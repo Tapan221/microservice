@@ -1,0 +1,5 @@
+package com.example.zjpabasics.dao;
+
+public interface Repository {
+
+}

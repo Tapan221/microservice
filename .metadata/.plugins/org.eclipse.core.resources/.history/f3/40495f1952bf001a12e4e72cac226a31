@@ -1,0 +1,30 @@
+package com.example.vmwarenumbergenerator.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.vmwarenumbergenerator.model.Generator;
+import com.example.vmwarenumbergenerator.model.ResponseObject;
+import com.example.vmwarenumbergenerator.service.NumberService;
+
+@RestController
+@RequestMapping("/api")
+public class NumberGeneratorController {
+	@Autowired
+	private NumberService numberService;
+	
+	@PostMapping("/generate")
+	public ResponseEntity<ResponseObject> saveNumberGenerator(@RequestBody Generator generator) {
+		Map<String, Integer> map =  numberService.saveData(generator);
+		ResponseObject obj = new ResponseObject();
+		return null;
+		
+	}
+
+}

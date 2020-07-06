@@ -1,0 +1,14 @@
+package com.example.swagger2.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.swagger2.model.Contact;
+
+@RestController
+public class AddressBook {
+	
+	public Contact getContact() {
+		
+	}
+
+}
