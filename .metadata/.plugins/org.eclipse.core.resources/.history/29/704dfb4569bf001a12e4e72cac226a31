@@ -75,7 +75,6 @@ public class NumberService {
 		return result;
 	}
 	
-	@SuppressWarnings("finally")
 	public String  getStatus(int uid) {
 		fileName= uid+"_output.txt";
 		filePath = file.getAbsolutePath()+"\\"+fileName;

@@ -49,23 +49,7 @@ public class NumberGeneratorController {
 	
 	@GetMapping("/tasks/{uid}/status")
 	public ResponseEntity<StreamData> getStatus(@PathVariable int uid){
-		try {
-			StreamData obj = new StreamData();
-			String response = numberService.getStatus(uid);
-			if(response.equalsIgnoreCase("SUCCESS")) {
-				obj.setResult(response);
-				return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
-			}else {
-				obj.setResult("ERROR");
-				return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
-			}
-		}catch(Exception e) {
-			StreamData obj = new StreamData();
-			obj.setResult("ERROR");
-			return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
-		}
-		finally {
-			
-		}
+		return null;
 	}
+
 }

@@ -74,29 +74,5 @@ public class NumberService {
 		}
 		return result;
 	}
-	
-	@SuppressWarnings("finally")
-	public String  getStatus(int uid) {
-		fileName= uid+"_output.txt";
-		filePath = file.getAbsolutePath()+"\\"+fileName;
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
-			try {
-				data = reader.readLine();
-				result = data.substring(0, data.length()-1);
-				result="SUCCESS";
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			result="ERROR";
-		}finally {
-			return result;
-		}
-		
-	}
 
 }

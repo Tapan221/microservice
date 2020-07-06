@@ -57,12 +57,12 @@ public class NumberGeneratorController {
 				return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
 			}else {
 				obj.setResult("ERROR");
-				return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
+				return new ResponseEntity<StreamData>(obj,HttpStatus.NO_CONTENT);
 			}
 		}catch(Exception e) {
 			StreamData obj = new StreamData();
 			obj.setResult("ERROR");
-			return new ResponseEntity<StreamData>(obj,HttpStatus.OK);
+			return new ResponseEntity<StreamData>(obj,HttpStatus.NO_CONTENT);
 		}
 		finally {
 			
