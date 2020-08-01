@@ -1,9 +1,0 @@
-package com.example.vmwarenumbergenerator.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.example.vmwarenumbergenerator.model.Generator;
-
-public interface NumberRepo extends JpaRepository<Generator, Integer>{
-
-}

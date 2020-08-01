@@ -2,6 +2,14 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\microservice\security"/>
+			<item value="C:\microservice\covid19"/>
+			<item value="C:\microservice\myapplication"/>
+			<item value="C:\microservice\covid"/>
+			<item value="C:\microservice\z-rest-swagger"/>
+			<item value="C:\microservice\vmware-number-generator"/>
+			<item value="C:\microservice\z-jpa-basics"/>
+			<item value="C:\microservice\swagger2"/>
 			<item value="C:\microservice\netflix-zuul-api-gateway-server"/>
 			<item value="C:\microservice\netflix-eureka-naming-server"/>
 			<item value="C:\microservice\currency-conversion-service"/>

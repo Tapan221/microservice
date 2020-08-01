@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="VmwareNumberGeneratorApplicationTests" project="vmware-number-generator" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.example.vmwarenumbergenerator.VmwareNumberGeneratorApplicationTests" time="0.193" displayname="VmwareNumberGeneratorApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.example.vmwarenumbergenerator.VmwareNumberGeneratorApplicationTests]">
-    <testcase name="contextLoads" classname="com.example.vmwarenumbergenerator.VmwareNumberGeneratorApplicationTests" time="0.193" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.example.vmwarenumbergenerator.VmwareNumberGeneratorApplicationTests]/[method:contextLoads()]"/>
-  </testsuite>
-</testrun>

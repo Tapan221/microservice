@@ -1,9 +1,0 @@
-package com.example.zjpabasics.dao;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.example.zjpabasics.model.Student;
-
-public interface Repository extends JpaRepository<Student, Integer>{
-
-}

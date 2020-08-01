@@ -1,7 +1,0 @@
-package com.example.vmwarenumbergenerator.controller;
-
-import org.springframework.http.ResponseEntity;
-
-public class ResponseObject extends ResponseEntity {
-
-}
