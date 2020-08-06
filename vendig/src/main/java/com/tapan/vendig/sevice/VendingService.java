@@ -35,7 +35,10 @@ public class VendingService {
 	
 	public Map<String,Integer> getBalanceAmount(Order order) {
 		int bal=  valueOfCoinReceivedFromUser(order)-getCostOfTheItem(order);	
+		if(bal >0)
 		return getCoins(bal);
+		else
+			return null;
 	}
 	
 	public int valueOfCoinReceivedFromUser(Order order) {

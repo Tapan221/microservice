@@ -27,7 +27,7 @@ public class Controller {
 		return service.saveContributerDetails(contributer);	
 	}
 	
-	@GetMapping("/getAllContributer")
+	@GetMapping("/getAllContributer") 
 	public List<Contributer> getAllContributers() {
 		return service.getAllContributerDetails();		
 	}
@@ -41,6 +41,12 @@ public class Controller {
 	@GetMapping("/getAllDonations")
 	public List<Donation> getAllDonationDetails(){
 		return service.getAllDonationDetails();
+		
+	}
+	
+	@PostMapping("/getIndivisualContribution")
+	public List<Contributer> getIndivisualContribution(@RequestBody String email){
+		return service.getIndivisualContribution(email);
 		
 	}
 	

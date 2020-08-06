@@ -22,8 +22,13 @@ public class MachineController {
 	public ReturnItems processRequest(@RequestBody Order order) {
 		
 		if(VendingService.checkItemExistInMachine(order.getItem())) {
-			Map<String, Integer> map= VendingService.getBalanceAmount(order);	
+			Map<String, Integer> map= VendingService.getBalanceAmount(order);
+			if(map != null)
 			return new ReturnItems(map,order.getItem());
+			else {
+				Map<String, Integer> map1= VendingService.coinsReceivedFromOrder(order);
+				return new ReturnItems(map1,"Insufficient Amount");
+			}
 		}
 		else {
 			Map<String, Integer> map= VendingService.coinsReceivedFromOrder(order);

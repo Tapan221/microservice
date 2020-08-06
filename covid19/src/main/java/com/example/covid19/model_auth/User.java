@@ -1,4 +1,4 @@
-package com.example.covid19.model;
+package com.example.covid19.model_auth;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +17,15 @@ public class User {
 	private String userName;
 	private String password;
 	private String email;
+	private boolean userrole;
+	
+	
+	public boolean isUserrole() {
+		return userrole;
+	}
+	public void setUserrole(boolean userrole) {
+		this.userrole = userrole;
+	}
 	public long getId() {
 		return id;
 	}
@@ -41,12 +50,13 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public User(long id, String userName, String password, String email) {
+	public User(long id, String userName, String password, String email, boolean userrole) {
 		super();
 		this.id = id;
 		this.userName = userName;
 		this.password = password;
 		this.email = email;
+		this.userrole=userrole;
 	}
 	public User() {
 		super();
@@ -54,8 +64,10 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email + "]";
+		return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email
+				+ ", userrole=" + userrole + "]";
 	}
+	
 	
 	
 

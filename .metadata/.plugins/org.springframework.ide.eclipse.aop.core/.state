@@ -4,9 +4,11 @@
 <aop-project name="limits-service"/>
 <aop-project name="spring-cloud-config-server"/>
 <aop-project name="netflix-zuul-api-gateway-server"/>
+<aop-project name="vendig"/>
 <aop-project name="z-jpa-basics"/>
 <aop-project name="covid19"/>
 <aop-project name="z-rest-swagger"/>
+<aop-project name="backend"/>
 <aop-project name="security"/>
 <aop-project name="swagger2"/>
 <aop-project name="currency-exchange-service"/>

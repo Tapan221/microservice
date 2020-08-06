@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\microservice\vending-master"/>
+			<item value="C:\microservice\vendig"/>
 			<item value="C:\microservice\security"/>
 			<item value="C:\microservice\covid19"/>
 			<item value="C:\microservice\myapplication"/>
@@ -15,8 +17,6 @@
 			<item value="C:\microservice\currency-conversion-service"/>
 			<item value="C:\microservice\currency-exchange-service"/>
 			<item value="C:\microservice\spring-cloud-config-server"/>
-			<item value="C:\microservice\limits-service"/>
-			<item value="C:\microservice"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

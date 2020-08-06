@@ -39,17 +39,19 @@ public class CurdService {
 
 	
 	//Contribution services
-	public Contributer saveContributerDetails(Contributer contributer){		
+	public Contributer saveContributerDetails(Contributer contributer){						
+		Contributer response = crudRepository.save(contributer);
 		
-		Thread t1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				sendMail.sendMailtoIndivisualContributer(contributer);	 			
-			}			
-		});
-		t1.start(); 
-		
-		return crudRepository.save(contributer);
+		if((response!=null) && response.getMail().equals(contributer.getMail())) {
+			Thread t1 = new Thread(new Runnable() {
+				@Override
+				public void run() {
+					sendMail.sendMailtoIndivisualContributer(contributer);	 			
+				}			
+			});
+			t1.start(); 
+		}
+		return response;
 	}
 	
 	public List<Contributer> getAllContributerDetails() {
@@ -60,22 +62,26 @@ public class CurdService {
 	//Donation services
 	
 	public Donation saveDonationDetails(Donation donation) {
-		
-		Thread t2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				sendMail.sendMailtoAllContributers(mailList.toString(), donation);	 			
-			}			
-		});
-		t2.start(); 
-		
-		return donationRepository.save(donation);
-		
+		Donation response = donationRepository.save(donation);
+		if((response!=null) && response.getDname().equals(donation.getDname())) {
+			Thread t2 = new Thread(new Runnable() {
+				@Override
+				public void run() {
+					sendMail.sendMailtoAllContributers(mailList.toString(), donation);	 			
+				}			
+			});
+			t2.start(); 
+		}
+		return response;		
 	}
 	
 	public List<Donation> getAllDonationDetails(){
 		return donationRepository.findAll();
 		
+	}
+	
+	public List<Contributer> getIndivisualContribution(String email){
+		return crudRepository.findByMail(email);			
 	}
 
 }
